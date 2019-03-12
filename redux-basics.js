@@ -35,6 +35,7 @@ const rootReducer = (state = initialState, action) => {
 
 
 //store
+// takes a reducer as the parameter
 const store = createStore(rootReducer);
 console.log(store.getState());
 
@@ -44,7 +45,7 @@ console.log(store.getState());
 // the subscribe function takes a callback function that will be exicuted whenever the state is updated.
 store.subscribe(() => {
     console.log('[Subscription]', store.getState());
-}); 
+});
 
 
 // dispatching action
